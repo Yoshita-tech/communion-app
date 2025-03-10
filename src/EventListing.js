@@ -33,7 +33,18 @@ export default function EventListing() {
     setErrorMessage(""); // Clear error message
   };
 
+  const backgroundStyle = {
+    backgroundImage: "url('/images/background.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    minHeight: "100vh",
+    padding: "20px",
+    color: "black",
+  };
+  
   return (
+    <div style={backgroundStyle}>
     <div className="event-container">
       <h1>📅 Upcoming Events</h1>
 
@@ -100,6 +111,7 @@ export default function EventListing() {
 
         <button className="cta-button" onClick={addEvent}>Add Event</button>
       </div>
+    </div>
     </div>
   );
 }

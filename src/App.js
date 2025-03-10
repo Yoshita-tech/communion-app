@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import EventListing from "./EventListing";
-import logo from "./logo.svg"; // Ensure this file exists in src
+import logo from "./logo.svg"; 
 import "./App.css";
 
 export default function App() {

@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 
 const Home = () => {
+  useEffect(() => {
+    // Access the element with the class 'home-header'
+    const homeHeader = document.querySelector('.home-header');
+
+    // Dynamically set the background image and other properties using JavaScript
+    homeHeader.style.backgroundImage = 'url("/images/home.jpg")'; // Set background image
+    homeHeader.style.backgroundSize = 'cover'; // Ensure the image covers the section
+    homeHeader.style.backgroundPosition = 'center center'; // Center the background image
+    homeHeader.style.minHeight = '100vh'; // Set the height to cover the full page
+    homeHeader.style.display = 'flex';
+    homeHeader.style.flexDirection = 'column';
+    homeHeader.style.alignItems = 'center';
+    homeHeader.style.justifyContent = 'center';
+    homeHeader.style.textAlign = 'center';
+    homeHeader.style.color = 'black'; // Optional: change text color for contrast
+  }, []);
 
   return (
     <div className="home-container">
@@ -56,6 +72,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
