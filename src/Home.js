@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Home.css";
+import EventListing from "./EventListing";
 
 const Home = () => {
   useEffect(() => {
@@ -27,6 +28,10 @@ const Home = () => {
         <Link to="/events"  className="explore-button">🌟 Explore Events</Link>
       </header>
 
+      <Routes>
+        <Route path="/events" element={<EventListing />} />
+      </Routes>
+
       <section className="hero-section">
         <div className="hero-content">
           <h2>Connecting People Across Faiths & Interests</h2>
@@ -41,7 +46,7 @@ const Home = () => {
             <li>🤝 Foster Stronger Relationships Through Shared Activities</li>
             <li>🎉 Create & Promote Your Own Events</li>
           </ul>
-          <a href="/events" className="cta-button">📅 Browse Events</a>
+          <Link to="/events" className="cta-button">📅 Browse Events</Link>
         </div>
         <img src="/images/community-gathering.jpg" alt="Community Gathering" className="community-image" />
       </section>
