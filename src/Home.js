@@ -24,7 +24,7 @@ const Home = () => {
       <header className="home-header">
         <h1>Welcome to <span className="highlight">Communion App</span></h1>
         <p>Bringing people together through shared values, events, and community support.</p>
-        <a href="/events" className="explore-button">🌟 Explore Events</a>
+        <Link to="/events"  className="explore-button">🌟 Explore Events</Link>
       </header>
 
       <section className="hero-section">
