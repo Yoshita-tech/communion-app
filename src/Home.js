@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Home.css";
-import EventListing from "./EventListing";
+import { Link } from "react-router-dom";  // Add this line
 
 const Home = () => {
   useEffect(() => {
@@ -27,10 +27,6 @@ const Home = () => {
         <p>Bringing people together through shared values, events, and community support.</p>
         <Link to="/events"  className="explore-button">🌟 Explore Events</Link>
       </header>
-
-      <Routes>
-        <Route path="/events" element={<EventListing />} />
-      </Routes>
 
       <section className="hero-section">
         <div className="hero-content">
