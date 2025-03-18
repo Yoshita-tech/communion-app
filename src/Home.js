@@ -1,23 +1,20 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom"; // ✅ This is needed for navigation
 import "./Home.css";
-import { Link } from "react-router-dom";  // Add this line
 
 const Home = () => {
   useEffect(() => {
-    // Access the element with the class 'home-header'
     const homeHeader = document.querySelector('.home-header');
-
-    // Dynamically set the background image and other properties using JavaScript
-    homeHeader.style.backgroundImage = 'url("/images/home.jpg")'; // Set background image
-    homeHeader.style.backgroundSize = 'cover'; // Ensure the image covers the section
-    homeHeader.style.backgroundPosition = 'center center'; // Center the background image
-    homeHeader.style.minHeight = '100vh'; // Set the height to cover the full page
+    homeHeader.style.backgroundImage = 'url("/images/home.jpg")';
+    homeHeader.style.backgroundSize = 'cover';
+    homeHeader.style.backgroundPosition = 'center center';
+    homeHeader.style.minHeight = '100vh';
     homeHeader.style.display = 'flex';
     homeHeader.style.flexDirection = 'column';
     homeHeader.style.alignItems = 'center';
     homeHeader.style.justifyContent = 'center';
     homeHeader.style.textAlign = 'center';
-    homeHeader.style.color = 'black'; // Optional: change text color for contrast
+    homeHeader.style.color = 'black';
   }, []);
 
   return (
@@ -25,9 +22,10 @@ const Home = () => {
       <header className="home-header">
         <h1>Welcome to <span className="highlight">Communion App</span></h1>
         <p>Bringing people together through shared values, events, and community support.</p>
-        <Link to="/events"  className="explore-button">🌟 Explore Events</Link>
+        <Link to="/events" className="explore-button">🌟 Explore Events</Link>
       </header>
 
+      {/* KEEP this section */}
       <section className="hero-section">
         <div className="hero-content">
           <h2>Connecting People Across Faiths & Interests</h2>
@@ -73,4 +71,3 @@ const Home = () => {
 };
 
 export default Home;
-
